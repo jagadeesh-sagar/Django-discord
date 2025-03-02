@@ -6,6 +6,8 @@
     <title>Document</title>
   </head>
   <body>
-    {% include 'navbar.html' %} {%block content%} {%endblock%}
+    {% include 'navbar.html' %} {% if messages%} {% for message in messages%}
+    <p>{{message}}</p>
+    {%endfor%} {% endif %} {%block content%} {%endblock%}
   </body>
 </html>
