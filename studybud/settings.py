@@ -82,13 +82,20 @@ WSGI_APPLICATION = 'studybud.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#     'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'discord',
+#         'USER':'postgres',
+#         'PASSWORD':os.environ.get("POSTGRESQL_PASSWORD"),
+#         'HOST':'localhost'
+#     }
+# }
+
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'discord',
-        'USER':'postgres',
-        'PASSWORD':os.environ.get("POSTGRESQL_PASSWORD"),
-        'HOST':'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
